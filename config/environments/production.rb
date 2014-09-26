@@ -2,6 +2,7 @@ SampleApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
+
   config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
@@ -13,6 +14,11 @@ SampleApp::Application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
+
+  #Force all access to the app over SSL, use Strict-Transport-Security,
+  # and use secure cookies
+
+  config.force_ssl = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
